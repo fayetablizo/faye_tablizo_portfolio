@@ -161,6 +161,55 @@
           <p class="hint">More projects will be added after each semester, each with a description, the tools used, and a link.</p>
         </article>
 
+        <article class="card project rain-project" aria-labelledby="rain-title">
+          <h4 id="rain-title">Automatic Rain-Sensing Clothesline Using Arduino</h4>
+          <p>An Arduino clothesline that pulls itself in when it rains. A rain sensor is installed on the roof or outside the house to detect water. When the weather is dry, the sensor sends a HIGH signal to the Arduino and the clothesline stays outside. Once the sensor detects water or rain, it sends a LOW signal. The Arduino then commands the motor to pull the clothesline back under the roof or shelter, so the clothes do not get wet.</p>
+
+          <figure class="rain-demo" id="rain-demo">
+            <svg viewBox="0 0 800 330" role="img" aria-label="Animation of the clothesline moving under the roof when it rains">
+              <circle class="sun" cx="690" cy="55" r="30"></circle>
+              <g class="cloud"><ellipse cx="640" cy="55" rx="70" ry="26"></ellipse><ellipse cx="590" cy="68" rx="46" ry="22"></ellipse><ellipse cx="695" cy="70" rx="50" ry="22"></ellipse></g>
+              <rect class="wall" x="20" y="130" width="300" height="180"></rect>
+              <polygon class="roof" points="0,130 170,60 340,130"></polygon>
+              <rect class="roof" x="20" y="130" width="440" height="14"></rect>
+              <rect class="door" x="60" y="200" width="60" height="110"></rect>
+              <rect class="win" x="200" y="190" width="70" height="60"></rect>
+              <rect class="sensor" x="440" y="116" width="26" height="14" rx="3"></rect>
+              <text class="lbl" x="398" y="108">Rain sensor</text>
+              <rect class="pole" x="340" y="150" width="8" height="160"></rect>
+              <rect class="pole" x="740" y="150" width="8" height="160"></rect>
+              <rect class="grass" x="0" y="310" width="800" height="20"></rect>
+              <g class="cloth-line">
+                <line x1="344" y1="170" x2="744" y2="170"></line>
+                <rect class="c1" x="400" y="172" width="46" height="70" rx="4"></rect>
+                <rect class="c2" x="500" y="172" width="46" height="90" rx="4"></rect>
+                <rect class="c3" x="600" y="172" width="46" height="70" rx="4"></rect>
+                <rect class="c4" x="690" y="172" width="40" height="55" rx="4"></rect>
+              </g>
+              <g class="drops">
+                <line x1="380" y1="20" x2="372" y2="50"></line><line x1="450" y1="0" x2="442" y2="30"></line><line x1="520" y1="30" x2="512" y2="60"></line>
+                <line x1="590" y1="0" x2="582" y2="30"></line><line x1="660" y1="20" x2="652" y2="50"></line><line x1="730" y1="0" x2="722" y2="30"></line>
+                <line x1="410" y1="60" x2="402" y2="90"></line><line x1="560" y1="70" x2="552" y2="100"></line><line x1="700" y1="60" x2="692" y2="90"></line>
+              </g>
+            </svg>
+            <figcaption>
+              <button class="btn rain-toggle" type="button" aria-pressed="false">Make it rain</button>
+              <span class="rain-status" role="status" aria-live="polite">Sensor: HIGH (dry) &middot; Clothesline: outside</span>
+            </figcaption>
+          </figure>
+
+          <figure class="proj-photo">
+            <img src="images/clothesline.jpe" alt="Photo of the automatic rain-sensing clothesline project" loading="lazy">
+            <figcaption>Photo of the project</figcaption>
+          </figure>
+
+          <ul class="tags" aria-label="Tools used">
+            <li>Arduino</li>
+            <li>Rain sensor</li>
+            <li>Motor</li>
+          </ul>
+        </article>
+
         <h3 class="sub">Certificates</h3>
         <p class="hint center">All three were given on October 28, 2026 at the 4th Techcellence Awards, Cavite State University &ndash; Bacoor City Campus. Select a certificate to enlarge it.</p>
         <ul class="certs">

@@ -65,6 +65,34 @@
     });
   }
 
+
+  // ---------- Rain-sensing clothesline demo ----------
+  var demo = document.getElementById("rain-demo");
+  if (demo) {
+    var toggle = demo.querySelector(".rain-toggle");
+    var status = demo.querySelector(".rain-status");
+    toggle.addEventListener("click", function () {
+      var raining = demo.classList.toggle("is-rain");
+      toggle.setAttribute("aria-pressed", raining ? "true" : "false");
+      toggle.textContent = raining ? "Stop the rain" : "Make it rain";
+      status.innerHTML = raining
+        ? "Sensor: LOW (water detected) &middot; Clothesline: pulled in"
+        : "Sensor: HIGH (dry) &middot; Clothesline: outside";
+    });
+  }
+
+  // ---------- Project photo fallback ----------
+  document.querySelectorAll(".proj-photo").forEach(function (fig) {
+    var img = fig.querySelector("img");
+    var cap = fig.querySelector("figcaption");
+    function missing() {
+      fig.classList.add("no-photo");
+      if (cap) { cap.textContent = "Project photo coming soon."; }
+    }
+    img.addEventListener("error", missing);
+    if (img.complete && img.naturalWidth === 0) { missing(); }
+  });
+
   // ---------- Highlight the current section in the navigation ----------
   var links = document.querySelectorAll('.bar nav a[href^="#"]');
   if (!("IntersectionObserver" in window) || !links.length) { return; }
